@@ -1,0 +1,196 @@
+body {
+  background-size: cover;
+}
+
+header {
+  text-align: right;
+  margin: 45px;
+  font-family: 'Hey Comic', sans-serif;
+}
+
+button {
+  font-size: 17px;
+}
+
+.font-header {
+  font-size: 27px;
+}
+
+.formal {
+  width: 300px;
+  height: 400px;
+  border-radius: 10%;
+}
+
+.name {
+  font-size: 55px;
+}
+
+.containerheader {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 230px;
+  background-color: #fccd2a;
+}
+
+/* MAIN CONTENT */
+.main-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+  background-color: green;
+}
+
+.slider {
+  width: 100%;
+  height: 700px; /* Tinggi slider */
+  overflow: hidden;
+  position: relative; /* Untuk posisi slide */
+  padding: 150px;
+  margin-right: 20px;
+  border-radius: 20px;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute; /* Agar tidak tumpang tindih */
+  top: 0;
+  left: 0;
+  opacity: 0; /* Mulai dengan transparan */
+  transition: opacity 0.5s ease; /* Transisi halus */
+}
+
+.slide.active {
+  opacity: 1; /* Menampilkan slide aktif */
+}
+
+.bio {
+  font-family: 'Playfair', serif;
+  font-size: 67px;
+  color: antiquewhite;
+}
+
+.span-bio {
+  color: #fccd2a;
+  font-family: 'Playfair', serif;
+  font-size: 60px;
+}
+
+.title-aboutme {
+  font-weight: bold;
+  font-size: 50px;
+  color: white;
+  text-align: left;
+}
+
+.font-bio {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 15px;
+  text-align: left;
+  color: antiquewhite;
+}
+
+.skill-tools {
+  background-color: #c0b6ac;
+  text-align: center;
+  padding: 70px;
+}
+
+.title-skilltools {
+  font-family: 'Climate Crisis', serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: 'YEAR' 1979;
+  font-style: normal;
+  margin-bottom: 30px;
+}
+
+.tools {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  margin: 35px;
+}
+
+.expe {
+  background-color: #8eb694;
+  padding: 50px;
+  text-align: center;
+}
+
+.title-expe {
+  margin-bottom: 35px;
+  font-family: 'Poppins';
+}
+
+/*Carousel ================================================== */
+.carousel-revou,
+.carousel-py,
+.carousel-papi {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.img-expe {
+  width: 100%;
+  display: block;
+}
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  text-align: center;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: none; /* Initially hide all slides */
+}
+.carousel-item.active {
+  display: block; /* Show active slide */
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  text-align: center;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: grey;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+}
+.carousel-control-prev {
+  left: 10px;
+}
+.carousel-control-next {
+  right: 10px;
+}
