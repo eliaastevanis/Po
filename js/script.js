@@ -1,41 +1,41 @@
 // Slider Banner
 let currentSlide = 0;
-const slides = document.querySelectorAll('.slide'); // Mengambil semua elemen slide
+const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
-let slideInterval; // Variabel untuk menyimpan interval
+let slideInterval; // Variabel menyimpan interval
 
-// Menyembunyikan semua slide
+// hide semua slide
 function showSlide(index) {
   slides.forEach((slide, i) => {
     slide.classList.remove('active'); // Menghapus class aktif
     if (i === index) {
-      slide.classList.add('active'); // Menampilkan slide yang sesuai
+      slide.classList.add('active'); // show slide yang sesuai
     }
   });
 }
 
-// Menampilkan slide pertama
+// show slide pertama
 showSlide(currentSlide);
 
-// Fungsi untuk mengganti slide
+// ganti slide
 function changeSlide(direction) {
-  currentSlide = (currentSlide + direction + totalSlides) % totalSlides; // Menghitung slide berikutnya
+  currentSlide = (currentSlide + direction + totalSlides) % totalSlides; // itung next slide
   showSlide(currentSlide);
   resetInterval(); // Reset interval setiap kali slide berubah
 }
 
-// Mengatur interval untuk otomatis mengganti slide setiap 3 detik
+// ganti tiap 3 detik
 function startInterval() {
   slideInterval = setInterval(() => changeSlide(1), 3000);
 }
 
-// Menghentikan interval
+// stop interval
 function resetInterval() {
   clearInterval(slideInterval);
   startInterval(); // Mulai interval baru
 }
 
-// Mulai interval saat halaman dimuat
+// start
 startInterval();
 
 // Slider Python
@@ -66,7 +66,6 @@ document.getElementById('prevButtonPy').addEventListener('click', () => {
   changeSlidePy(-1);
 });
 
-// Tampilkan slide pertama saat halaman dimuat
 showSlidePy(currentSlidePy);
 
 // Slider Intern
@@ -98,5 +97,4 @@ document.getElementById('prevButtonPapi').addEventListener('click', () => {
   changeSlidePapi(-1);
 });
 
-// Tampilkan slide pertama saat halaman dimuat
 showSlidePapi(currentSlidePapi);
