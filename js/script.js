@@ -98,3 +98,39 @@ document.getElementById('prevButtonPapi').addEventListener('click', () => {
 });
 
 showSlidePapi(currentSlidePapi);
+
+// Slider Organization
+let currentSlideOrg = 0;
+const slidesOrg = document.querySelectorAll(
+  '.carousel-organization .carousel-item'
+);
+const totalSlidesOrg = slidesOrg.length;
+
+// Function to show the current slide
+function showSlideOrg(index) {
+  slidesOrg.forEach((slide, i) => {
+    slide.classList.remove('active'); // Remove active class
+    if (i === index) {
+      slide.classList.add('active'); // Show the active slide
+    }
+  });
+}
+
+// Function to change slide
+function changeSlideOrg(direction) {
+  currentSlideOrg =
+    (currentSlideOrg + direction + totalSlidesOrg) % totalSlidesOrg; // Calculate next slide
+  showSlideOrg(currentSlideOrg);
+}
+
+// Event listeners for Organization slider
+document.getElementById('nextButtonOrg').addEventListener('click', () => {
+  changeSlideOrg(1); // Next slide
+});
+
+document.getElementById('prevButtonOrg').addEventListener('click', () => {
+  changeSlideOrg(-1); // Previous slide
+});
+
+// Show the first slide initially
+showSlideOrg(currentSlideOrg);

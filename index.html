@@ -20,25 +20,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Pacifico&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Cherry+Bomb+One&family=Climate+Crisis:YEAR@2015&family=Eczar:wght@400..800&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Koulen&family=Londrina+Shadow&family=Original+Surfer&family=Oswald:wght@300&family=Pacifico&family=Playfair:ital,opsz,wght@1,5..1200,300..900&family=Risque&family=Shrikhand&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <div class="containerheader">
-      <header>
-        <h3 class="font-header">hi i'm</h3>
-        <h1 class="name">ELIA STEVANI</h1>
-        <p class="font-header">Welcome to my personal website!</p>
-        <a href="#about-me"><button>ABOUT ME</button></a>
-        <a href="#contact"><button>CONTACT</button></a>
-      </header>
-      <img class="formal" src="img\formal.jpeg" alt="" />
+    <div class="header-group">
+      <div class="header">
+        <h1 class="hi">hi i'm</h1>
+        <h2 class="name">ELIA STEVANI</h2>
+        <p class="capt">Welcome to My Personal Website!</p>
+        <div class="buttons">
+          <button class="button-header">ABOUT ME</button>
+          <button class="button-header">CONTACT</button>
+        </div>
+      </div>
+      <div class="profile-picture">
+        <img src="img\formal.jpeg" alt="Profile Picture" />
+      </div>
     </div>
 
     <!-- Ini gabungan antara Foto/Slider dengan Bio-->
     <main id="about-me" class="main-group">
       <!-- Foto/Slider -->
+
       <div class="slider">
         <div
           class="slide"
@@ -61,12 +66,15 @@
         ></div>
         <div class="slide" style="background-image: url('img/imgg.jpeg')"></div>
       </div>
+
       <!-- Bio -->
 
-      <h1>
-        <span class="bio">AB</span><span class="span-bio">O</span
-        ><span class="bio">UT</span> <span class="bio">M</span
-        ><span class="span-bio">E</span>
+      <div class="text-bio">
+        <div>
+          <span class="bio">AB</span><span class="span-bio">O</span
+          ><span class="bio">UT</span> <span class="bio">M</span
+          ><span class="span-bio">E</span>
+        </div>
         <p class="font-bio">
           A recent graduate from Krisnadwipayana University in 2024, Actively
           participated in the student organization from 2021 to 2023 while
@@ -93,7 +101,7 @@
           I also have several hobbies, which include hiking, swimming, reading
           books, listening to music, jogging, and various other types of sports.
         </p>
-      </h1>
+      </div>
     </main>
 
     <!-- Skill and Tools -->
@@ -116,7 +124,7 @@
       <div class="carousel-revou">
         <img class="img-expe" src="img/revou.jpeg" alt="" />
         <div class="carousel-caption">
-          <h5>Software Engineering Fundamental Course by Revou</h5>
+          <h2>Software Engineering Fundamental Course by Revou</h2>
           <p>
             Create UI with HTML, design with CSS and layout, learn JavaScript
             validation & deployment to GitHub
@@ -130,43 +138,43 @@
           <div class="carousel-item active">
             <img class="img-expe" src="img\py1.png" alt="Slide 1" />
             <div class="carousel-caption">
-              <h5>Python by DqLab</h5>
+              <h2>Python by DqLab</h2>
             </div>
           </div>
           <div class="carousel-item">
             <img class="img-expe" src="img\py2.png" alt="Slide 2" />
             <div class="carousel-caption">
-              <h5>Python by DqLab</h5>
+              <h2>Python by DqLab</h2>
             </div>
           </div>
           <div class="carousel-item">
             <img class="img-expe" src="img\py3.png" alt="Slide 3" />
             <div class="carousel-caption">
-              <h5>Python by DqLab</h5>
+              <h2>Python by DqLab</h2>
             </div>
           </div>
           <div class="carousel-item">
             <img class="img-expe" src="img\py4.png" alt="Slide 3" />
             <div class="carousel-caption">
-              <h5>Python by DqLab</h5>
+              <h2>Python by DqLab</h2>
             </div>
           </div>
           <div class="carousel-item">
             <img class="img-expe" src="img\py5.png" alt="Slide 3" />
             <div class="carousel-caption">
-              <h5>Python by DqLab</h5>
+              <h2>Python by DqLab</h2>
             </div>
           </div>
           <div class="carousel-item">
             <img class="img-expe" src="img\py6.png" alt="Slide 3" />
             <div class="carousel-caption">
-              <h5>Python by DqLab</h5>
+              <h2>Python by DqLab</h2>
             </div>
           </div>
           <div class="carousel-item">
             <img class="img-expe" src="img\py7.png" alt="Slide 3" />
             <div class="carousel-caption">
-              <h5>Python by DqLab</h5>
+              <h2>Python by DqLab</h2>
             </div>
           </div>
         </div>
@@ -180,80 +188,80 @@
           <div class="carousel-item active">
             <img class="img-expe" src="img/papi1.png" alt="Slide 1" />
             <div class="carousel-caption">
-              <h5>
+              <h2>
                 Designing a website at LSP Ataknas as an intern student using
                 Figma
-              </h5>
+              </h2>
               <p>Home Page</p>
             </div>
           </div>
           <div class="carousel-item">
             <img class="img-expe" src="img/papi2.png" alt="Slide 2" />
             <div class="carousel-caption">
-              <h5>
+              <h2>
                 Designing a website at LSP Ataknas as an intern student using
                 Figma
-              </h5>
+              </h2>
               <p>Visi Misi & Tujuan Page</p>
             </div>
           </div>
           <div class="carousel-item">
             <img class="img-expe" src="img/papi3.png" alt="Slide 3" />
             <div class="carousel-caption">
-              <h5>
+              <h2>
                 Designing a website at LSP Ataknas as an intern student using
                 Figma
-              </h5>
+              </h2>
               <p>Dewan Pengurus Page</p>
             </div>
           </div>
           <div class="carousel-item">
             <img class="img-expe" src="img/papi4.png" alt="Slide 4" />
             <div class="carousel-caption">
-              <h5>
+              <h2>
                 Designing a website at LSP Ataknas as an intern student using
                 Figma
-              </h5>
+              </h2>
               <p>Keanggotaan Page</p>
             </div>
           </div>
           <div class="carousel-item">
             <img class="img-expe" src="img/papi5.png" alt="Slide 5" />
             <div class="carousel-caption">
-              <h5>
+              <h2>
                 Designing a website at LSP Ataknas as an intern student using
                 Figma
-              </h5>
+              </h2>
               <p>Sertifikasi Page</p>
             </div>
           </div>
           <div class="carousel-item">
             <img class="img-expe" src="img/papi6.png" alt="Slide 6" />
             <div class="carousel-caption">
-              <h5>
+              <h2>
                 Designing a website at LSP Ataknas as an intern student using
                 Figma
-              </h5>
+              </h2>
               <p>Regulasi Page</p>
             </div>
           </div>
           <div class="carousel-item">
             <img class="img-expe" src="img/papi7.png" alt="Slide 7" />
             <div class="carousel-caption">
-              <h5>
+              <h2>
                 Designing a website at LSP Ataknas as an intern student using
                 Figma
-              </h5>
+              </h2>
               <p>Login Page</p>
             </div>
           </div>
           <div class="carousel-item">
             <img class="img-expe" src="img/papi8.png" alt="Slide 8" />
             <div class="carousel-caption">
-              <h5>
+              <h2>
                 Designing a website at LSP Ataknas as an intern student using
                 Figma
-              </h5>
+              </h2>
               <p>Register Page</p>
             </div>
           </div>
@@ -262,7 +270,33 @@
         <button class="carousel-control-next" id="nextButtonPapi">❯</button>
       </div>
 
-      <h1 class="title-expe">NOT DONE YET</h1>
+      <h1 class="title-expe">Organization</h1>
+      <div class="carousel-organization">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="img-expe" src="img/Elia Stevani.jpg" alt="Slide 2" />
+            <div class="carousel-caption">
+              <h2>Secretary 2 of Himatif</h2>
+              <p>
+                Makes outgoing and receives incoming letters, and makes meeting
+                results
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="img-expe" src="img/mc.png" alt="Slide 1" />
+            <div class="carousel-caption">
+              <h2>
+                MC in the webinar titled 'Implementation of Image Processing for
+                Object Classification'
+              </h2>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" id="prevButtonOrg">❮</button>
+        <button class="carousel-control-next" id="nextButtonOrg">❯</button>
+      </div>
+
       <!-- Slider Secretary 2 Himatif -->
       <!--
       <ul>
