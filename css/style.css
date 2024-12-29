@@ -1,49 +1,86 @@
 body {
   background-size: cover;
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
 
-/* Responsive Styles */
-@media (max-width: 650px) {
+@media (max-width: 600px) {
   .main-group,
   .header-group {
     flex-direction: column;
-  }
-
-  .bio,
-  .span-bio,
-  .title-aboutme,
-  .font-bio {
-    font-size: 20px;
-  }
-
-  .formal {
-    width: 90%; /* Lebar responsif */
-  }
-
-  .tools {
-    height: 150px;
-    width: 150px;
+    padding: 20px;
   }
 
   .button-header {
     margin: 5px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .text-bio {
+    padding: 0;
+    text-align: center;
+  }
+
+  .bio,
+  .span-bio {
+    font-size: 30px;
+  }
+
+  .profile-picture img {
+    width: 100%;
+    height: auto;
+  }
+
+  .slider {
+    height: 300px;
+  }
+
+  .skill-tools,
+  .expe {
+    padding: 20px;
+  }
+
+  .tools {
+    height: 100px;
+    width: 100px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 25px;
+    height: 25px;
   }
 }
 
 .header-group {
   display: flex;
   align-items: center;
-  justify-content: right;
-  padding: 250px;
+  justify-content: flex-end;
+  padding: 50px;
   background-color: #fccd2a;
+  flex-direction: column;
 }
 
 .header {
   text-align: right;
   margin-right: 30px;
+  text-align: center;
+  padding: 20px;
+}
+
+.header img {
+  width: 200px;
+  height: 250px;
+  border-radius: 10%;
+  margin-top: 10px;
+}
+
+nav {
+  margin-top: 20px;
 }
 
 .hi {
@@ -51,13 +88,11 @@ body {
   margin: 0;
   font-family: 'Original Surfer', serif;
   font-weight: 400;
-  font-style: normal;
 }
 
 .name {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  font-style: normal;
   font-size: 50px;
 }
 
@@ -66,7 +101,6 @@ body {
   margin: 0;
   font-family: 'Original Surfer', serif;
   font-weight: 400;
-  font-style: normal;
 }
 
 .buttons {
@@ -76,7 +110,6 @@ body {
 .button-header {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  font-style: normal;
   font-size: 16px;
   padding: 10px 20px;
   margin-right: 10px;
@@ -86,6 +119,7 @@ body {
   background-color: white;
   color: #333;
   transition: background-color 0.3s;
+  margin: 5px;
 }
 
 button:hover {
@@ -94,52 +128,72 @@ button:hover {
 
 .profile-picture img {
   border-radius: 10%;
-  width: 300px; /* Adjust width as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 300px;
+  height: auto;
 }
 
-/* MAIN CONTENT */
-/* style untuk elemen utama */
-
 .main-group {
-  margin: 0 auto; /* Pusatkan konten */
-  padding: 20px; /* Tambahkan padding */
+  margin: 0 auto;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: green;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Gaya untuk slider */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+main article,
+main aside {
+  width: 100%;
+  max-width: 600px;
+  margin: 10px;
+}
+
+main article {
+  order: 2;
+}
+
+main aside {
+  order: 1;
+}
+
 .slider {
   position: relative;
-  width: 100%; /* Lebar penuh */
-  height: 700px; /* Tinggi slider */
-  overflow: hidden; /* Sembunyikan bagian yang melampaui */
-  border-radius: 10px; /* Sudut melengkung */
-  transform: scale(0.8); /* Mengubah skala slider menjadi 80% */
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  border-radius: 10px;
+  max-width: 600px;
 }
 
-/* Gaya untuk setiap slide */
 .slide {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover; /* Ukuran gambar sesuai dengan ukuran slide */
-  opacity: 0; /* Mulai dengan transparan */
-  transition: opacity 0.5s ease; /* Transisi halus */
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: none;
+  height: 300px;
+  background-position: center;
 }
 
-/* Gaya untuk slide yang aktif */
 .slide.active {
-  opacity: 1; /* Tampilkan slide aktif */
+  opacity: 1;
 }
 
 .text-bio {
-  padding-left: 50px;
-  margin-right: 50px;
+  padding: 0 50px;
 }
 
 .bio {
@@ -157,7 +211,6 @@ button:hover {
 .font-bio {
   font-family: 'Poppins', sans-serif;
   font-weight: 200;
-  font-style: normal;
   font-size: 15px;
   text-align: left;
   color: antiquewhite;
@@ -171,11 +224,7 @@ button:hover {
 
 .title-skilltools {
   font-family: 'Climate Crisis', serif;
-  font-optical-sizing: auto;
   font-weight: 400;
-  font-style: normal;
-  font-variation-settings: 'YEAR' 1979;
-  font-style: normal;
   margin-bottom: 30px;
 }
 
@@ -196,10 +245,8 @@ button:hover {
   margin-bottom: 35px;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  font-style: normal;
 }
 
-/*Carousel ================================================== */
 .carousel-revou,
 .carousel-py,
 .carousel-papi,
@@ -220,27 +267,30 @@ button:hover {
   display: flex;
   transition: transform 0.5s ease;
 }
+
 .carousel-item {
   min-width: 100%;
   box-sizing: border-box;
-  display: none; /* Initially hide all slides */
+  display: none;
 }
+
 .carousel-item.active {
-  display: block; /* Show active slide */
+  display: block;
 }
 
 .carousel-caption {
   position: absolute;
   bottom: 20px;
-  left: 0; /* Tambahkan ini untuk mengatur posisi ke kiri */
-  right: 0; /* Tambahkan ini untuk mengatur posisi ke kanan */
+  left: 0;
+  right: 0;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px; /* Sesuaikan padding sesuai kebutuhan */
+  padding: 20px;
   text-align: center;
-  width: 100%; /* Pastikan lebar 100% untuk memenuhi konten */
-  box-sizing: border-box; /* Pastikan padding tidak mempengaruhi lebar */
+  width: 100%;
+  box-sizing: border-box;
 }
+
 .carousel-control-prev,
 .carousel-control-next {
   position: absolute;
@@ -253,9 +303,50 @@ button:hover {
   width: 35px;
   height: 35px;
 }
+
 .carousel-control-prev {
   left: 10px;
 }
+
 .carousel-control-next {
   right: 10px;
+}
+
+@media (min-width: 768px) {
+  .header-group {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  main {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  main article,
+  main aside {
+    width: 45%;
+  }
+
+  main article {
+    order: 1;
+  }
+
+  main aside {
+    order: 2;
+  }
+}
+
+/* contoh animasi */
+.kotak {
+  animation: bergerak 3s infinite;
+}
+
+@keyframes bergerak {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: 200px;
+  }
 }

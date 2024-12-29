@@ -1,3 +1,21 @@
+document.getElementById('hi').innerHTML = "hi, i'm";
+
+document.getElementById('name').innerHTML = 'ELIA STEVANI';
+
+document.getElementById('capt').innerHTML = 'Welcome to My Personal Website!';
+
+document
+  .getElementById('button-aboutme')
+  .addEventListener('click', function () {
+    document.getElementById('about-me').scrollIntoView({ behavior: 'smooth' });
+  });
+
+document
+  .getElementById('button-contact')
+  .addEventListener('click', function () {
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+  });
+
 // Slider Banner
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');

@@ -25,22 +25,29 @@
     />
   </head>
   <body>
-    <div class="header-group">
-      <div class="header">
-        <h1 class="hi">hi i'm</h1>
-        <h2 class="name">ELIA STEVANI</h2>
-        <p class="capt">Welcome to My Personal Website!</p>
-        <div class="buttons">
-          <button class="button-header">ABOUT ME</button>
-          <button class="button-header">CONTACT</button>
+    <header>
+      <div class="header-group">
+        <div class="header">
+          <div class="kotak">
+            <h1 id="hi" class="hi"></h1>
+            <h2 id="name" class="name"></h2>
+            <p id="capt" class="capt"></p>
+            <div class="buttons">
+              <button id="button-aboutme" class="button-header">
+                ABOUT ME
+              </button>
+              <button id="button-contact" class="button-header">CONTACT</button>
+            </div>
+          </div>
+        </div>
+        <div class="profile-picture">
+          <img src="img\formal.jpeg" alt="Profile Picture" />
         </div>
       </div>
-      <div class="profile-picture">
-        <img src="img\formal.jpeg" alt="Profile Picture" />
-      </div>
-    </div>
+    </header>
 
     <!-- Ini gabungan antara Foto/Slider dengan Bio-->
+
     <main id="about-me" class="main-group">
       <!-- Foto/Slider -->
 
@@ -320,6 +327,8 @@
         <li>Part-time at Hokben 08/2023 - 11/2024</li>
       </ul>-->
     </div>
+
+    <div id="contact"></div>
 
     <!-- Javascript -->
     <script src="js\script.js"></script>
